@@ -1,0 +1,27 @@
+
+	#arch-d-tect {
+		display: none;
+		width: 0px;
+	}
+
+	@media (min-width: 768px) {
+		#arch-d-tect {
+			width: 768px;
+		}
+	}
+
+	@media (min-width: 992px) {
+		#arch-d-tect {
+			width: 992px;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		#arch-d-tect {
+			width: 1200px;
+		}
+	}
+
+	.arch-clear-both {
+		clear: both;
+	}
