@@ -25,3 +25,9 @@
 	.arch-clear-both {
 		clear: both;
 	}
+
+	.arch-center-only [class^=col-]:only-child {
+		float: none;
+		margin-right: auto;
+		margin-left: auto;
+	}
