@@ -9,7 +9,7 @@
             var lg = archDtect.css("width") === "1200px";
             var size = (lg ? "lg" : md ? "md" : sm ? "sm" : "xs");
             var count = 0;
-            $(".row-count-fix").children().each(function() {
+            $(".arch-wrap-fix").children().each(function() {
                 $( this ).removeClass('arch-clear-both');
                 var applied, current_xs = false, current_sm = false, current_md = false, current_lg = false;
                 var splitClassName = $( this ).attr('class').split(/\s+/);
