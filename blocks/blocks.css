@@ -1,0 +1,141 @@
+/* http://lea.verou.me/2011/01/styling-children-based-on-their-number-with-css3/ */
+
+body {
+	margin: 0;
+	font-family: sans-serif;
+}
+
+	body.dev .tower>div {
+		position: relative;
+	}
+	body.dev .tower>div::before {
+		content: " ";
+		position: absolute;
+		width: calc(100% - 4px);
+		height: calc(100% - 4px);
+		top: 2px;
+		left: 2px;
+		z-index: -1;
+		background-color: rgba(0, 0, 0, 0.15);
+	}
+
+	body.dev .tower>div>div {
+		position: relative;
+	}
+	body.dev .tower>div>div::before {
+		content: " ";
+		position: absolute;
+		width: calc(100% - 4px);
+		height: calc(100% - 4px);
+		top: 2px;
+		left: 2px;
+		z-index: -1;
+		background-color: rgba(0, 0, 0, 0.15);
+	}
+.tower::before,
+.tower::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+	.tower>div {
+		white-space: normal;
+		height: 100vh;
+		float: left;
+		box-sizing: border-box;
+	}
+	.tower>div>div {
+		box-sizing: border-box;
+	}
+
+	/* 1 Block Wide */
+	.tower>div:nth-child(1):nth-last-child(1) {
+		width: 100%;
+	}
+
+	/* 2 Blocks Wide */
+	.tower>div:nth-child(1):nth-last-child(2),
+	.tower>div:nth-child(1):nth-last-child(2) ~ div {
+		width: calc(100% / 2);
+	}
+
+	/* 3 Blocks Wide */
+	.tower>div:nth-child(1):nth-last-child(3),
+	.tower>div:nth-child(1):nth-last-child(3) ~ div {
+		width: calc(100% / 3);
+	}
+
+	/* 4 Blocks Wide */
+	.tower>div:nth-child(1):nth-last-child(4),
+	.tower>div:nth-child(1):nth-last-child(4) ~ div {
+		width: calc(100% / 4);
+	}
+
+	/* 5 Blocks Wide */
+	.tower>div:nth-child(1):nth-last-child(5),
+	.tower>div:nth-child(1):nth-last-child(5) ~ div {
+		width: calc(100% / 5);
+	}
+
+	/* 6 Blocks Wide */
+	.tower>div:nth-child(1):nth-last-child(6),
+	.tower>div:nth-child(1):nth-last-child(6) ~ div {
+		width: calc(100% / 6);
+	}
+
+	/* 7 Blocks Wide */
+	.tower>div:nth-child(1):nth-last-child(7),
+	.tower>div:nth-child(1):nth-last-child(7) ~ div {
+		width: calc(100% / 7);
+	}
+
+	/* 8 Blocks Wide */
+	.tower>div:nth-child(1):nth-last-child(8),
+	.tower>div:nth-child(1):nth-last-child(8) ~ div {
+		width: calc(100% / 8);
+	}
+
+		.tower>div>span,
+		.tower>div>div>span {
+			display: table-cell;
+			width: 1%;
+			height: 100vh;
+		}
+
+		.tower span.align-middle {
+			vertical-align: middle;
+		}
+
+		.tower span.align-center {
+			text-align: center;
+		}
+
+	/* 1 Block High */
+	.tower>div>div:nth-child(1):nth-last-child(1) {
+		height: 100vh;
+	}
+
+	/* 2 Blocks High */
+	.tower>div>div:nth-child(1):nth-last-child(2),
+	.tower>div>div:nth-child(1):nth-last-child(2) ~ div,
+	.tower>div>div:nth-child(1):nth-last-child(2)>span,
+	.tower>div>div:nth-child(1):nth-last-child(2) ~ div>span {
+		height: calc(100vh / 2);
+	}
+
+	/* 3 Blocks High */
+	.tower>div>div:nth-child(1):nth-last-child(3),
+	.tower>div>div:nth-child(1):nth-last-child(3) ~ div,
+	.tower>div>div:nth-child(1):nth-last-child(3)>span,
+	.tower>div>div:nth-child(1):nth-last-child(3) ~ div>span {
+		height: calc(100vh / 3);
+	}
+
+	/* 4 Blocks High */
+	.tower>div>div:nth-child(1):nth-last-child(4),
+	.tower>div>div:nth-child(1):nth-last-child(4) ~ div,
+	.tower>div>div:nth-child(1):nth-last-child(4)>span,
+	.tower>div>div:nth-child(1):nth-last-child(4) ~ div>span {
+		height: calc(100vh / 4);
+	}
